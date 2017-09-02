@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	ret = udsploit();
 	printf("%08X\n", (unsigned int)ret);
 	if(ret) goto fail;
-	
+
 	printf("udsploit success\n");
 
 	ret = hook_kernel();
@@ -41,6 +41,7 @@ int main(int argc, char **argv)
 		gfxSwapBuffers();
 	}
 
+	printf("Press 'START' to continue.")
 	gfxExit();
 	return 0;
 }
